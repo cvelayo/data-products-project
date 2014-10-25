@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The BAC calculator</title>
+  <meta charset="utf-8">
+  <meta name="description" content="The BAC calculator">
+  <meta name="author" content="Christopher Yñigo Velayo">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>The BAC calculator</h1>
+    <h2></h2>
+    <p>Christopher Yñigo Velayo<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Why a BAC calculator</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Whether someone is a casual drinker or a heavy drinker, it is useful to know what the Blood Alcohol Concentration (BAC) might be when drinking for several reasons.</p>
+
+<ul>
+<li>Knowing the level of intoxication can promote safer behaviors</li>
+<li>Regardless of how inoxicated someone feels, the actual BAC determines the impact on their health</li>
+<li>Different people would have different BACs even if they have the same number of drinks</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Factors affecting BAC</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>There are four main factors that determine what someone&#39;s BAC might be.</p>
+
+<ol>
+<li>The amount of alcohol consumed</li>
+<li>The rate of consumption</li>
+<li>The drinker&#39;s body mass</li>
+<li>The sex of the drinker</li>
+</ol>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>Same drinks, different BACs</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>Despite having the same number of drinks over the same amount of time, these two drinkers end up with different BACs.</p>
+
+<div style='float:left;width:48%;'>
+  <pre><code class="r">drinks &lt;- 10
+hours &lt;- 10
+weight1 &lt;- 160
+genderadjustment1 &lt;- .58
+
+bac1 &lt;- round(((.806 * drinks * 1.2)/
+        (weight1 * .453592 * genderadjustment1)) - 
+        (.017 * hours),2)
+bac1
+</code></pre>
+
+<pre><code>## [1] 0.06
+</code></pre>
+
+</div>
+<div style='float:right;width:48%;'>
+  <pre><code class="r">weight2 &lt;- 120
+genderadjustment2 &lt;- .49
+
+bac2 &lt;- round(((.806 * drinks * 1.2)/
+        (weight2 * .453592 * genderadjustment2)) - 
+        (.017 * hours),2)
+bac2
+</code></pre>
+
+<pre><code>## [1] 0.19
+</code></pre>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>The BAC Calculator App</h2>
+  </hgroup>
+  <article data-timings="">
+    
+<div style='float:left;width:48%;'>
+  <p><img src="ui.png" alt="User interface"></p>
+
+</div>
+<div style='float:right;width:48%;'>
+  <h3>Why use this app?</h3>
+
+<ul>
+<li>Easy interface</li>
+<li>As seen earlier, different drinkers would have different BACs</li>
+<li>Also calculates the time to sober up.</li>
+</ul>
+
+</div>
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Why a BAC calculator'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Factors affecting BAC'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Same drinks, different BACs'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='The BAC Calculator App'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
