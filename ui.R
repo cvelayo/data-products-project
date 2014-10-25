@@ -15,10 +15,15 @@ shinyUI(fluidPage(
   # Sidebar with a inputs for needed variables
   sidebarLayout(
     sidebarPanel(
-      p("This app calculates an estimated peak Blood Alcohol Concentration(BAC) 
+      h3("Documentation/Instructions"),
+      p("This app calculates an estimated peak Blood Alcohol Concentration (BAC) 
         based on user submitted values. To run this app, select your gender, enter
         your weight in pounds, choose the number of standard drinks consumed, and
         select the number of hours these drinks were consumed over."),
+      p("The ui.R and server.R files are located at the following GitHub repository:"),
+      a("https://github.com/cvelayo/data-products-project"),
+      br(),
+      p("================="),
       radioButtons("gender",
                    "Select your gender:",
                    choices = list("Male" = 1, "Female" = 2)),
